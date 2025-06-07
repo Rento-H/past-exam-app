@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ univ }}の学部</title>
+</head>
+<body>
+  <h1>{{ univ }}の学部</h1>
+  <ul>
+    {% for faculty in faculties %}
+      <li><a href="/{{ univ }}/{{ faculty }}">{{ faculty }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/">← 大学一覧へ戻る</a>
+</body>
+</html>

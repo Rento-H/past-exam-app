@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ department }}の学年</title>
+</head>
+<body>
+  <h1>{{ department }}（{{ faculty }}・{{ univ }}）の学年</h1>
+  <ul>
+    {% for year in years %}
+      <li><a href="/{{ univ }}/{{ faculty }}/{{ department }}/{{ year }}">{{ year }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/{{ univ }}/{{ faculty }}">← 学科一覧へ戻る</a>
+</body>
+</html>

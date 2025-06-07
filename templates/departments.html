@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ faculty }}の学科</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>{{ faculty }}の学科（{{ univ }}）</h1>
+  <ul>
+    {% for dept in departments %}
+      <li><a href="/{{ univ }}/{{ faculty }}/{{ dept }}">{{ dept }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/{{ univ }}">← 学部一覧へ戻る</a>
+</body>
+</html>

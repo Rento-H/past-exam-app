@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ year }}の問題一覧</title>
+</head>
+<body>
+  <h1>{{ department }} {{ year }}年の問題一覧</h1>
+  <ul>
+    {% for pdf in pdfs %}
+      <li><a href="/pdf/{{ univ }}/{{ faculty }}/{{ department }}/{{ year }}/{{ pdf }}">{{ pdf }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/{{ univ }}/{{ faculty }}/{{ department }}">← 学年一覧へ戻る</a>
+</body>
+</html>

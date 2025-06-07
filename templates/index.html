@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>大学選択</title>
+</head>
+<body>
+  <h1>大学一覧</h1>
+  <ul>
+    {% for univ in universities %}
+      <li><a href="/{{ univ }}">{{ univ }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
