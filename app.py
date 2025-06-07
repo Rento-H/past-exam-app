@@ -39,5 +39,9 @@ def pdf_view(filepath):
     filename = os.path.basename(full_path)
     return send_from_directory(directory, filename)
 
+
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # 環境変数PORT（Renderが指定する）を使う
+    app.run(host='0.0.0.0', port=port, debug=True)  # 外部アクセス可能にする
